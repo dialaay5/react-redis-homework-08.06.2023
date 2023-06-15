@@ -15,8 +15,8 @@ class Classes extends Component {
         const classesList = classes.length ?
             (classes.map(clss => {
                 return (
-                    <div className=" class-list container " key={clss.id}>
-                        <div className="card center" >
+                    <div className=" class-list" key={clss.id}>
+                        <div className="card" >
                             <img class="card-img-top" src={ClassImg} alt="a class image" />
                             <p>Class ID : {clss.id}</p>
                             <p> Number Of Students : {clss.numberOfStudents}</p>
@@ -32,9 +32,11 @@ class Classes extends Component {
             }))
             : (<div className="center">No classes to show</div>)
         return (
-            <div className="container">
-                <h4 className="center" style={{ color: '#880e4f' }}><em>ClassRooms List</em></h4>
+            <div>
+            <h4 className="center" style={{ color: '#880e4f' }}><em>ClassRooms List</em></h4>
+            <div className="cardContainer">
                 {classesList}
+            </div>
             </div>)
     }
     componentDidMount() {

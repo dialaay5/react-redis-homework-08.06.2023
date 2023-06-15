@@ -73,7 +73,7 @@ class CreateClass extends Component {
                             <input name="classAvg" value="0.0" readOnly="readonly" /></p>
 
                         <p>Class Room Type :
-                            <input placeholder="Enter MALE / FEMALE" name="classRoomType" type="text" id="classRoomType" onChange={this.handleChange}
+                            <input placeholder="Enter REGULAR / EXTERNAL" name="classRoomType" type="text" id="classRoomType" onChange={this.handleChange}
                                 value={this.state.new_classRoom_data.classRoomType} required /></p>
 
                         <div className="button-div">
