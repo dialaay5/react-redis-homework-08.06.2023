@@ -1,0 +1,31 @@
+.form-class-div {
+    background-color: #fff0f0;
+    height: 480px;
+    width: 450px;
+    margin: auto;
+    padding: 20px;
+    border: 5px outset rgb(140, 28, 91);
+
+}
+
+p {
+    font-size: 15px;
+    color: rgb(69, 69, 69);
+    font-weight: 500;
+}
+
+.button-div {
+    text-align: center;
+    padding-top: 5px;
+}
+
+.form-student-div {
+    background-color: #fff0f0;
+    height: 590x;
+    width: 500px;
+    margin: auto;
+    padding: 8px;
+    border: 5px outset rgb(140, 28, 91);
+
+}
+

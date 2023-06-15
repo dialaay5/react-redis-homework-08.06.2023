@@ -1,0 +1,22 @@
+{
+  "name": "myreact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullstack180822/myreact.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fullstack180822/myreact/issues"
+  },
+  "homepage": "https://github.com/fullstack180822/myreact#readme",
+  "dependencies": {
+    "create-react-app": "^5.0.1"
+  }
+}

@@ -1,0 +1,44 @@
+.class-list {
+margin: auto ;
+margin-top: 50px;
+max-width: 600px;
+}
+
+/* css of the card background */
+.class-list .card {
+  background: #fff0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+ 
+}
+
+.class-list .card:hover {
+  transform: rotate(3deg);
+}
+
+ /* css of the card text */
+.class-list .card p {
+  margin: 5px auto 0;
+  color: #424242;
+  font-size: 0.9em;
+  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* css of the button "show details*/
+.class-list .card a {
+  font-weight: bold;
+  color: #ffffff;
+  background: #928f8f;
+  font-size: 1em;
+  width: 100px;
+  text-align: center;
+  width: 150px;
+  padding: 8px;
+  border-radius: 10px;
+  margin: 10px auto 0;
+}
+
+
