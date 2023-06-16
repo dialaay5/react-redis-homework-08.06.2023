@@ -1,5 +1,5 @@
 .form-class-div {
-    background-color: #fff0f0;
+    background-color: #f8dfdf;
     height: 480px;
     width: 450px;
     margin: auto;
@@ -20,7 +20,7 @@ p {
 }
 
 .form-student-div {
-    background-color: #fff0f0;
+    background-color: #f8dfdf;
     height: 590x;
     width: 500px;
     margin: auto;
@@ -28,4 +28,3 @@ p {
     border: 5px outset rgb(140, 28, 91);
 
 }
-

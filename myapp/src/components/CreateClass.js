@@ -49,6 +49,8 @@ class CreateClass extends Component {
 
         this.setState({
             new_classRoom_data: {
+                numberOfStudents: 0,
+                classAvg: 0.0,
                 classRoomType: ""
             }
         })
@@ -56,7 +58,7 @@ class CreateClass extends Component {
 
     render() {
         return (
-            <div>
+            <div >
                 <Link to={`/`}>
                     <span ><i className="material-icons">keyboard_backspace</i>Back To Main Page</span>
                 </Link>
@@ -73,8 +75,13 @@ class CreateClass extends Component {
                             <input name="classAvg" value="0.0" readOnly="readonly" /></p>
 
                         <p>Class Room Type :
-                            <input placeholder="Enter REGULAR / EXTERNAL" name="classRoomType" type="text" id="classRoomType" onChange={this.handleChange}
-                                value={this.state.new_classRoom_data.classRoomType} required /></p>
+                            <select className="browser-default" name="classRoomType" id="classRoomType" onChange={this.handleChange}
+                                value={this.state.new_classRoom_data.classRoomType}>
+                                <option value="" disabled>Choose classRoom type</option>
+                                <option value="REGULAR">REGULAR</option>
+                                <option value="EXTERNAL">EXTERNAL</option>
+                            </select>
+                        </p>
 
                         <div className="button-div">
                             <button className="btn waves-effect waves-light center" type="submit" name="action">

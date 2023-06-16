@@ -16,27 +16,37 @@ class Classes extends Component {
             (classes.map(clss => {
                 return (
                     <div className=" class-list" key={clss.id}>
-                        <div className="card" >
-                            <img class="card-img-top" src={ClassImg} alt="a class image" />
-                            <p>Class ID : {clss.id}</p>
-                            <p> Number Of Students : {clss.numberOfStudents}</p>
-                            <p> Class Avg :{clss.classAvg}</p>
-                            <p> ClassRoom Type :{clss.classRoomType}</p>
-                            <Link to={`/class/${clss.id}`}>
-                                <span>Show Details</span>
-                            </Link>
+                        <div className="row">
+                                <div className="card ">
+                                    <div className="card-image">
+                                        <img src={ClassImg} alt="a class image" />
+                                    </div>
+                                    <div className="card-content">
+                                        <p>Class ID : {clss.id}</p>
+                                        <p> Number Of Students : {clss.numberOfStudents}</p>
+                                        <p> Class Avg : {clss.classAvg}</p>
+                                        <p> ClassRoom Type : {clss.classRoomType}</p>
+                                    </div>
+                                    <div>
+                                        <Link to={`/class/${clss.id}`}>
+                                            <button className="btn waves-effect waves-light center" type="submit" name="action">Show Details</button>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+
+
 
                 )
             }))
             : (<div className="center">No classes to show</div>)
         return (
             <div>
-            <h4 className="center" style={{ color: '#880e4f' }}><em>ClassRooms List</em></h4>
-            <div className="cardContainer">
-                {classesList}
-            </div>
+                <h4 className="center" style={{ color: '#880e4f' }}><em>ClassRooms List</em></h4>
+                <div className="cardContainer">
+                    {classesList}
+                </div>
             </div>)
     }
     componentDidMount() {

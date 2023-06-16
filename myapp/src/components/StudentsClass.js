@@ -53,8 +53,8 @@ class StudentsClass extends Component {
                     {this.state.studintList.length ? studintList.map(student => {
                         return (
 
-                            <ul className="list-group">
-                                <li className="list-group-item list-group-item-warning" >
+                            <ul className="collection">
+                                <li className="collection-item active">
                                     Student ID: {student.id} &nbsp;&nbsp;
                                     LastName: {student.lastName} &nbsp;&nbsp;
                                     FirstName: {student.firstName} &nbsp;&nbsp;
@@ -62,7 +62,6 @@ class StudentsClass extends Component {
                                     Gender: {student.gender} &nbsp;&nbsp;
                                     Class_Id: {student.class_id} &nbsp;&nbsp;
                                 </li>
-                                <br/>
                             </ul>
                         )
                     }) :

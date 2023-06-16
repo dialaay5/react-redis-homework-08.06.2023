@@ -34,9 +34,9 @@ class CreateStudent extends Component {
                 console.log(res);
                 console.log(res.data);
                 this.setState({
-                   idClass: res.data.class_id
-                }) 
-                
+                    idClass: res.data.class_id
+                })
+
                 Swal({
                     icon: 'success',
                     title: 'Greate...',
@@ -58,7 +58,7 @@ class CreateStudent extends Component {
                 firstName: "",
                 avgGrade: "",
                 gender: "",
-                class_id: ""
+                class_id: ""  
             }
         })
     }
@@ -85,8 +85,13 @@ class CreateStudent extends Component {
                                 value={this.state.new_student_data.avgGrade} required /></p>
 
                         <p>Gender :
-                            <input placeholder="Enter MALE / FEMALE" name="gender" type="text" id="gender" onChange={this.handleChange}
-                                value={this.state.new_student_data.gender} required /></p>
+                            <select className="browser-default" name="gender" id="gender" onChange={this.handleChange}
+                            value={this.state.new_student_data.gender}>
+                                <option value="" disabled>Choose gender</option>
+                                <option value="MALE">MALE</option>
+                                <option value="FEMALE">FEMALE</option>
+                            </select>
+                        </p>
 
                         <p>Class Id:
                             <input placeholder="Enter Class Id" name="class_id" type="number" id="class_id" onChange={this.handleChange}
