@@ -64,7 +64,7 @@ class CreateStudent extends Component {
     }
     render() {
         return (
-            <div>
+            <div key={this.state.new_student_data.id}>
                 <Link to={`/class/${this.state.idClass}`}>
                     <span ><i className="material-icons">keyboard_backspace</i>Back To Students ClassRoom Page </span>
                 </Link>
