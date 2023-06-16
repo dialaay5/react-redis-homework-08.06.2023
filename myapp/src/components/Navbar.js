@@ -6,7 +6,7 @@ const Navbar = (props) => {
         <nav className="nav-wrapper">
             <div className="col s12">
                 <Link to={`/`}>
-                    <a className="brand-logo">Forward Thinking School</a>
+                    <i className="brand-logo">Forward Thinking School</i>
                 </Link>
                 <ul className="right">
                     <li><NavLink to="/">Classes</NavLink></li>
