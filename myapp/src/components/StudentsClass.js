@@ -11,18 +11,18 @@ class StudentsClass extends Component {
     }
     componentDidMount() {
         const _id = this.props.match.params.class_id
-        if(this.props.studentList.length > 0){
+        if (this.props.studentList.length > 0) {
             console.log("get student data from redux");
             return this.props.studentList;
         }
-        else{
-        axios.get(`http://localhost:8086/api/student/dto/${_id}`)
-            .then(res => {
-                console.log(res.data);
-                console.log("get the student data by axios and put into redux");
-                this.props.class_By_Id(res.data.classRoom);
-                this.props.studint_List_By_Id(res.data.studentList)
-            })
+        else {
+            axios.get(`http://localhost:8086/api/student/dto/${_id}`)
+                .then(res => {
+                    console.log(res.data);
+                    console.log("get the student data by axios and put into redux");
+                    this.props.class_By_Id(res.data.classRoom);
+                    this.props.studint_List_By_Id(res.data.studentList)
+                })
         }
     }
     render() {
