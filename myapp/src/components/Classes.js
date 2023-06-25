@@ -8,11 +8,19 @@ import { connect } from 'react-redux';
 //with redux
 class Classes extends Component {
     componentDidMount() {
+        //אם התשובה שמורה בתוך הרידוקס אז לא צריך לשגר בקשה להביא הניתונים מחדש
+        if(this.props.classesList.length > 0){
+            console.log("get classes data from redux");
+            return this.props.classesList;
+        }
+        else{
         axios.get('http://localhost:8086/api/class')
             .then(res => {
                 console.log(res);
+                console.log("get the data by axios and put into redux");
                 this.props.save_classes_data(res.data);
             })
+        }
     }
 
     render() {

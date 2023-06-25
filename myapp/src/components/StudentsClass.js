@@ -11,16 +11,23 @@ class StudentsClass extends Component {
     }
     componentDidMount() {
         const _id = this.props.match.params.class_id
+        if(this.props.studentList.length > 0){
+            console.log("get student data from redux");
+            return this.props.studentList;
+        }
+        else{
         axios.get(`http://localhost:8086/api/student/dto/${_id}`)
             .then(res => {
                 console.log(res.data);
+                console.log("get the student data by axios and put into redux");
                 this.props.class_By_Id(res.data.classRoom);
                 this.props.studint_List_By_Id(res.data.studentList)
             })
+        }
     }
     render() {
         console.log(this.props);
-        
+
         const studentList = this.props.studentList
         const clss = this.props.classById ? (
             <div className="col s12">
@@ -44,8 +51,7 @@ class StudentsClass extends Component {
                     <h4 style={{ color: '#f50057' }}><em>Students ClassRoom List:-</em></h4>
                     {this.props.studentList.length ? studentList.map(student => {
                         return (
-
-                            <ul className="collection"  key={student.id}>
+                            <ul className="collection" key={student.id}>
                                 <li className="collection-item active">
                                     Student ID: {student.id} &nbsp;&nbsp;
                                     LastName: {student.lastName} &nbsp;&nbsp;
@@ -59,7 +65,6 @@ class StudentsClass extends Component {
                     }) :
                         (
                             <div className="center">The Class IS Empty...</div>
-
                         )
                     }
                 </div>
@@ -71,7 +76,7 @@ class StudentsClass extends Component {
 
         return (
             <div className="container">
-            {clss}
+                {clss}
             </div>)
     }
 
