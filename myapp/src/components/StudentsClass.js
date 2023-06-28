@@ -11,9 +11,9 @@ class StudentsClass extends Component {
     }
     componentDidMount() {
         const _id = this.props.match.params.class_id
-        if (this.props.studentList.length > 0) {
-            console.log("get student data from redux");
-            return this.props.studentList;
+        if(this.props.classById.id == _id){
+           console.log("get student data from redux");
+            return this.props.studentList; 
         }
         else {
             axios.get(`http://localhost:8086/api/student/dto/${_id}`)
@@ -27,8 +27,10 @@ class StudentsClass extends Component {
     }
     render() {
         console.log(this.props);
+        console.log(this.props.studentList);
 
-        const studentList = this.props.studentList
+
+        const {studentList} = this.props
         const clss = this.props.classById ? (
             <div className="col s12">
                 <div className="post">
@@ -96,7 +98,7 @@ const mapStateToProps = (store_state, current_props) => {
 // dispatch action to redux
 const mapDispatchToProps = (dispatch) => {
     return {
-        class_By_Id: getClass => dispatch({ type: 'class_By_Id', getClass }),
+        class_By_Id: getClass => dispatch({ type: 'class_By_Id', getClass  }),
         studint_List_By_Id: getStudentList => dispatch({ type: 'studint_List_By_Id', getStudentList })
     }
 }

@@ -1,6 +1,6 @@
 const init_state ={
     my_classes: [],
-    classById: null,
+    classById: [],
     my_students: []
   }
 
@@ -19,7 +19,7 @@ const init_state ={
         console.log(action);
         return {
             ...state,
-            classById: action.getClass
+            classById: {...action.getClass}
         }
       }
 
@@ -28,7 +28,7 @@ const init_state ={
         console.log(action);
         return {
             ...state,
-            my_students: action.getStudentList
+            my_students: [...action.getStudentList]
         }
       }
     return state;
